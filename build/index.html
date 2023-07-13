@@ -19,24 +19,32 @@
 
 <!-- Aqui comienza el codigo del nav-->
 
-  <header>
-    <nav class="sticky top-0 bg-base-100">
-      <div class="flex items-center justify-between px-4 py-2">
-        <div>
-          <a href="./index.html">
-            <img src="./img/Logo/Gluco_logo.png" class="btn btn-ghost normal-case text-xl">
-          </a>
-        </div>
-        <div class="flex space-x-4">
-          <a href="#nuestroProductos" class="btn btn-ghost">Productos</a>
-          <a href="#programaApoyo" class="btn btn-ghost">Programa Apoyo de Pacientes</a>
-          <a href="#quieneSomos" class="btn btn-ghost">Sobre nosotros</a>
-          <a href="#contacto" class="btn btn-ghost">Contacto</a>
-        </div>
+<header>
+  <nav class="sticky top-0 bg-base-100">
+    <div class="flex items-center justify-between px-4 py-2">
+      <div>
+        <a href="./index.html">
+          <img src="./img/Logo/Gluco_logo.png" class="btn btn-ghost normal-case text-xl">
+        </a>
       </div>
-    </nav>
-    
-  </header>
+      <div class="hidden md:flex space-x-4">
+        <a href="#nuestroProductos" class="btn btn-ghost">Productos</a>
+        <a href="#programaApoyo" class="btn btn-ghost">Programa Apoyo de Pacientes</a>
+        <a href="#quieneSomos" class="btn btn-ghost">Sobre nosotros</a>
+        <a href="#contacto" class="btn btn-ghost">Contacto</a>
+      </div>
+      <div class="md:hidden">
+        <button class="btn btn-ghost" id="mobile-menu-btn">Menú</button>
+      </div>
+    </div>
+    <div class="hidden md:hidden" id="mobile-menu">
+      <a href="#nuestroProductos" class="btn btn-ghost block">Productos</a>
+      <a href="#programaApoyo" class="btn btn-ghost block">Programa Apoyo de Pacientes</a>
+      <a href="#quieneSomos" class="btn btn-ghost block">Sobre nosotros</a>
+      <a href="#contacto" class="btn btn-ghost block">Contacto</a>
+    </div>
+  </nav>
+</header>
 
 <!-- Aqui comienza el codigo del hero page-->
   <main>
@@ -543,6 +551,14 @@ productos de Celnova para el tratamiento de su patologia.
       });
     });
   });
+
+  // JavaScript para mostrar y ocultar el menú desplegable en dispositivos móviles
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
 </script>
   <!-- <script src="./node_modules/preline/dist/preline.js"></script>-->
 </html>

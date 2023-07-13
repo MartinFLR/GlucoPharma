@@ -2697,6 +2697,14 @@ details.collapse summary::-webkit-details-marker {
     margin-top: 1rem;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
